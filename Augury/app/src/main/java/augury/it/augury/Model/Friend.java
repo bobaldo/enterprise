@@ -53,6 +53,7 @@ public class Friend {
 
     public String getImageUrl() {
         return imageUrl;
+        
     }
 
     private boolean autoSend;
