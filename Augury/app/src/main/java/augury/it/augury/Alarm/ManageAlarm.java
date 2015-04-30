@@ -7,6 +7,7 @@ import augury.it.augury.Model.Friend;
  */
 public class ManageAlarm {
     public void setAlarm(Friend friend) {
+
     }
 
     public void removeAlarm(Friend friend) {
