@@ -7,13 +7,15 @@ import java.util.Date;
  */
 public class Friend {
 
-    public Friend(){
+    public Friend() {
         //TODO:
     }
 
     private int id;
 
-    public int getId(){return id;}
+    public int getId() {
+        return id;
+    }
 
     private String firstName;
 
@@ -53,7 +55,6 @@ public class Friend {
 
     public String getImageUrl() {
         return imageUrl;
-        
     }
 
     private boolean autoSend;
