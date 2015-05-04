@@ -57,6 +57,16 @@ public class Friend {
         return imageUrl;
     }
 
+    private String telephoneNumber;
+
+    public String getTelephoneNumber() {
+        return telephoneNumber;
+    }
+
+    public void setTelephoneNumber(String telephoneNumber) {
+        this.telephoneNumber = telephoneNumber;
+    }
+
     private boolean autoSend;
 
     public Boolean getAutoSend() {
