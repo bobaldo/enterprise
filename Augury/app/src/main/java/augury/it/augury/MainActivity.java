@@ -30,6 +30,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         loginButton = (LoginButton) findViewById(R.id.login_button);
         loginButton.setOnClickListener(this);
+        
     }
 
     private FacebookCallback<LoginResult> mCallback = new FacebookCallback<LoginResult>() {
