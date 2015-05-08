@@ -23,7 +23,7 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        Toast.makeText(getApplicationContext(), "Ciaooooooo", Toast.LENGTH_LONG).show();
       /*  ParseObject testObject = new ParseObject("Friend");
         testObject.put("firstname", "stefano");
         testObject.put("lastname", "musaico");
@@ -58,16 +58,16 @@ public class MainActivity extends ActionBarActivity {
                 if (user == null) {
                     Log.d("MyApp", "LogIn. The user cancelled the Facebook login.");
 
-                    Toast.makeText(getApplicationContext(), err.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Errore", Toast.LENGTH_SHORT).show();
 
                     //Toast toast = Toast.makeText(getApplicationContext(), "LogIn. The user cancelled the Facebook login.", Toast.LENGTH_SHORT);
                 } else if (user.isNew()) {
                     Log.d("MyApp", "LogIn. User signed up and logged in through Facebook!");
-                    Toast.makeText(getApplicationContext(), err.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "ciao", Toast.LENGTH_SHORT).show();
                     //Toast toast = Toast.makeText(getApplicationContext(), "LogIn. User signed up and logged in through Facebook!", Toast.LENGTH_SHORT);
                 } else {
                     Log.d("MyApp", "LogIn. User logged in through Facebook!");
-                    Toast.makeText(getApplicationContext(), err.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"ciao", Toast.LENGTH_SHORT).show();
                     //Toast toast = Toast.makeText(getApplicationContext(), "LogIn. User logged in through Facebook!", Toast.LENGTH_SHORT);
                 }
             }
