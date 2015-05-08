@@ -23,7 +23,7 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toast.makeText(getApplicationContext(), "Ciaooooooo", Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), "Ciaooooooo11", Toast.LENGTH_LONG).show();
       /*  ParseObject testObject = new ParseObject("Friend");
         testObject.put("firstname", "stefano");
         testObject.put("lastname", "musaico");
