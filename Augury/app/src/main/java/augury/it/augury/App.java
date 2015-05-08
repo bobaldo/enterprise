@@ -19,7 +19,11 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        Parse.enableLocalDatastore(this);
+        Parse.initialize(this, "IxxqhUgzaiMY86iRjUQUhqtO3z0BiIRLX2NgrDaJ", "YyZqabhX8tdIZ7IsnAIfNt4KjtaVWZET6tlXr6WO");
 
+        ParseInstallation.getCurrentInstallation().saveInBackground();
+        ParseFacebookUtils.initialize(getApplicationContext());
 
     }
 }
