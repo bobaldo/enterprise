@@ -1,33 +1,63 @@
 package augury.it.augury;
 
+import android.app.ListActivity;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.parse.LogInCallback;
-import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseFacebookUtils;
 import com.parse.ParseUser;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
-public class MainActivity extends ActionBarActivity {
+import augury.it.augury.Model.Friend;
+
+public class MainActivity extends ListActivity implements AdapterView.OnItemClickListener {
+
+    ListView lista;
+    Friend amico;
+
+    List<Friend> listaAmici =  new AmiciData().getFriend();
+    public static final String FRIEND_BUNDLE = "FRIEND_BUNDLE";
+
+    FriendArrayAdapter adapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toast.makeText(getApplicationContext(), "Ciaooooooo1122", Toast.LENGTH_LONG).show();
+
+
       /*  ParseObject testObject = new ParseObject("Friend");
         testObject.put("firstname", "stefano");
         testObject.put("lastname", "musaico");
         testObject.saveEventually();*/
+
+        lista = (ListView) findViewById(android.R.id.list);
+
+
+
+        adapter = new FriendArrayAdapter(this, R.layout.lista_friend, listaAmici);
+        Log.d("ARRIVO FRIEND", listaAmici.toString());
+        ListView listView = (ListView) findViewById(android.R.id.list);
+        setListAdapter(adapter);
+
+        lista.setOnItemClickListener(this);
+
+
+
         ArrayList<String> permission = new ArrayList<String>();
         permission.add("friends_birthday");
        /* ParseFacebookUtils.logInInBackground(AccessToken.getCurrentAccessToken(), new LogInCallback() {
@@ -72,6 +102,19 @@ public class MainActivity extends ActionBarActivity {
                 }
             }
         });
+    }
+
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+//        Bundle b = amico.toBundle();
+
+
+        Log.v("ecco la posizione ", Integer.toString(position));
+        Intent intent = new Intent(this, DettaglioFriend.class);
+        // intent.putExtra(FRIEND_BUNDLE, b);
+        startActivity(intent);
     }
 
     @Override

@@ -1,26 +1,53 @@
 package augury.it.augury.Model;
 
-import java.util.Date;
+import android.os.Bundle;
 
 /**
  * Created by Bobaldo on 08/05/2015.
  */
 public class Friend {
-    public Friend() {
-        //TODO:
+
+    private String firstName;
+    public static final String FIRSTNAME = "firstName";
+
+    public Friend(String firstName) {
+        this.firstName = firstName;
     }
 
-    private int id;
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    //creato da un bundle
+    public Friend(Bundle b) {
+        if(b != null) {
+            this.firstName = b.getString(FIRSTNAME);
+
+        }
+    }
+
+    //Pacchetto dati da trasferire tra le varie activity
+    public Bundle toBundle() {
+        Bundle b = new Bundle();
+        b.putString(FIRSTNAME, this.FIRSTNAME);
+
+        return b;
+    }
+
+    /*private int id;
 
     public int getId() {
         return id;
     }
 
-    private String firstName;
 
-    public String getFirstName() {
-        return firstName;
-    }
+
+
 
     private String lastName;
 
@@ -64,5 +91,5 @@ public class Friend {
 
     public void setAutoSend(Boolean autoSend) {
         this.autoSend = autoSend;
-    }
+    }*/
 }
