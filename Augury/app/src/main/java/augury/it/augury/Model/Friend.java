@@ -2,18 +2,18 @@ package augury.it.augury.Model;
 
 import android.os.Bundle;
 
+import augury.it.augury.Utility.Constants;
+
 /**
  * Created by Bobaldo on 08/05/2015.
  */
 public class Friend {
 
     private String firstName;
-    public static final String FIRSTNAME = "firstName";
 
     public Friend(String firstName) {
         this.firstName = firstName;
     }
-
 
     public String getFirstName() {
         return firstName;
@@ -25,8 +25,8 @@ public class Friend {
 
     //creato da un bundle
     public Friend(Bundle b) {
-        if(b != null) {
-            this.firstName = b.getString(FIRSTNAME);
+        if (b != null) {
+            this.firstName = b.getString(Constants.FIRSTNAME);
 
         }
     }
@@ -34,8 +34,7 @@ public class Friend {
     //Pacchetto dati da trasferire tra le varie activity
     public Bundle toBundle() {
         Bundle b = new Bundle();
-        b.putString(FIRSTNAME, this.FIRSTNAME);
-
+        b.putString(Constants.FIRSTNAME, this.firstName);
         return b;
     }
 

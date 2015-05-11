@@ -1,6 +1,7 @@
 package augury.it.augury;
 
 import android.app.ListActivity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -20,25 +21,22 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import augury.it.augury.Facebook.ManageFacebook;
 import augury.it.augury.Model.Friend;
 
 public class MainActivity extends ListActivity implements AdapterView.OnItemClickListener {
-
-    ListView lista;
-    Friend amico;
-
-    List<Friend> listaAmici =  new AmiciData().getFriend();
-    public static final String FRIEND_BUNDLE = "FRIEND_BUNDLE";
-
-    FriendArrayAdapter adapter;
-
+    private ManageFacebook manageFacebook = new ManageFacebook();
+    private ListView lista;
+    private Context context;
+    private List<Friend> listaAmici;
+    private FriendArrayAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        this.context = this;
         Toast.makeText(getApplicationContext(), "PD", Toast.LENGTH_LONG).show();
-
 
       /*  ParseObject testObject = new ParseObject("Friend");
         testObject.put("firstname", "stefano");
@@ -47,16 +45,14 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
 
         lista = (ListView) findViewById(android.R.id.list);
 
-
-
-        adapter = new FriendArrayAdapter(this, R.layout.lista_friend, listaAmici);
-        Log.d("ARRIVO FRIEND", listaAmici.toString());
-        ListView listView = (ListView) findViewById(android.R.id.list);
+        /*
+        //TODO: eliminare
+        listaAmici = manageFacebook.getFriends();
+        adapter = new FriendArrayAdapter(context, R.layout.lista_friend, listaAmici);
         setListAdapter(adapter);
+        */
 
         lista.setOnItemClickListener(this);
-
-
 
         ArrayList<String> permission = new ArrayList<String>();
         permission.add("friends_birthday");
@@ -87,23 +83,27 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
             public void done(ParseUser user, ParseException err) {
                 if (user == null) {
                     Log.d("MyApp", "LogIn. The user cancelled the Facebook login.");
-
                     Toast.makeText(getApplicationContext(), "Errore", Toast.LENGTH_SHORT).show();
 
                     //Toast toast = Toast.makeText(getApplicationContext(), "LogIn. The user cancelled the Facebook login.", Toast.LENGTH_SHORT);
                 } else if (user.isNew()) {
+                    listaAmici = manageFacebook.getFriends();
+                    adapter = new FriendArrayAdapter(context, R.layout.lista_friend, listaAmici);
+                    setListAdapter(adapter);
                     Log.d("MyApp", "LogIn. User signed up and logged in through Facebook!");
                     Toast.makeText(getApplicationContext(), "ciao", Toast.LENGTH_SHORT).show();
                     //Toast toast = Toast.makeText(getApplicationContext(), "LogIn. User signed up and logged in through Facebook!", Toast.LENGTH_SHORT);
                 } else {
+                    listaAmici = manageFacebook.getFriends();
+                    adapter = new FriendArrayAdapter(context, R.layout.lista_friend, listaAmici);
+                    setListAdapter(adapter);
                     Log.d("MyApp", "LogIn. User logged in through Facebook!");
-                    Toast.makeText(getApplicationContext(),"ciao", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "ciao", Toast.LENGTH_SHORT).show();
                     //Toast toast = Toast.makeText(getApplicationContext(), "LogIn. User logged in through Facebook!", Toast.LENGTH_SHORT);
                 }
             }
         });
     }
-
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import augury.it.augury.Utility.Constants;
+
 
 public class DettaglioFriend extends ActionBarActivity {
 
@@ -13,9 +15,7 @@ public class DettaglioFriend extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dettaglio_friend);
 
-        Bundle b = getIntent().getBundleExtra(MainActivity.FRIEND_BUNDLE);
-
-
+        Bundle b = getIntent().getBundleExtra(Constants.FRIEND_BUNDLE);
     }
 
 
