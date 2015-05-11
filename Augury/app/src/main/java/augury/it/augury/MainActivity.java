@@ -37,7 +37,7 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toast.makeText(getApplicationContext(), "Ciaooooooo1122", Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), "PD", Toast.LENGTH_LONG).show();
 
 
       /*  ParseObject testObject = new ParseObject("Friend");
