@@ -16,11 +16,11 @@ public class ManageFacebook {
     private List<Friend> friends = new ArrayList<>();
 
     public List<Friend> getFriends() {
-        friends.add(new Friend("Pippo"));
-        friends.add(new Friend("Paperino"));
-        friends.add(new Friend("Topolino"));
-        friends.add(new Friend("QuiQuoQua"));
-        friends.add(new Friend("Paperone"));
+        friends.add(new Friend("Pippo", "Pippo"));
+        friends.add(new Friend("Paperino", "Pippo"));
+        friends.add(new Friend("Topolino", "Pippo"));
+        friends.add(new Friend("QuiQuoQua", "Pippo"));
+        friends.add(new Friend("Paperone", "Pippo"));
         return friends;
     }
 }

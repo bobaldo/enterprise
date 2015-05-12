@@ -19,13 +19,17 @@ import com.parse.ParseUser;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import augury.it.augury.Facebook.ManageFacebook;
 import augury.it.augury.Model.Friend;
+import augury.it.augury.Storage.ManageParse;
 
 public class MainActivity extends ListActivity implements AdapterView.OnItemClickListener {
     private ManageFacebook manageFacebook = new ManageFacebook();
+    private ManageParse manageParse = new ManageParse();
     private ListView lista;
     private Context context;
     private List<Friend> listaAmici;
@@ -38,10 +42,7 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
         this.context = this;
         Toast.makeText(getApplicationContext(), "PD", Toast.LENGTH_LONG).show();
 
-      /*  ParseObject testObject = new ParseObject("Friend");
-        testObject.put("firstname", "stefano");
-        testObject.put("lastname", "musaico");
-        testObject.saveEventually();*/
+        //manageParse.insert(new Friend("davide", "patrizi"));
 
         lista = (ListView) findViewById(android.R.id.list);
 

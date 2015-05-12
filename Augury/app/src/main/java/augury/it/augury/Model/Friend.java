@@ -2,6 +2,8 @@ package augury.it.augury.Model;
 
 import android.os.Bundle;
 
+import java.util.Date;
+
 import augury.it.augury.Utility.Constants;
 
 /**
@@ -9,24 +11,30 @@ import augury.it.augury.Utility.Constants;
  */
 public class Friend {
 
-    private String firstName;
-
-    public Friend(String firstName) {
-        this.firstName = firstName;
+    //for test
+    //TODO: delete
+    public Friend(String firstName, String lastName) {
+        this.firstname = firstName;
+        this.lastname = lastName;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public Friend(String firstname, String lastname, Date birthdayDate, String idFacebook,String imageUrl, Boolean autoSend) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.birthdayDate = birthdayDate;
+        this.idFacebook = idFacebook;
+        this.imageUrl = imageUrl;
+        this.autoSend = autoSend;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
     }
 
     //creato da un bundle
     public Friend(Bundle b) {
         if (b != null) {
-            this.firstName = b.getString(Constants.FIRSTNAME);
+            this.firstname = b.getString(Constants.FIRSTNAME);
 
         }
     }
@@ -34,24 +42,26 @@ public class Friend {
     //Pacchetto dati da trasferire tra le varie activity
     public Bundle toBundle() {
         Bundle b = new Bundle();
-        b.putString(Constants.FIRSTNAME, this.firstName);
+        b.putString(Constants.FIRSTNAME, this.firstname);
         return b;
     }
 
-    /*private int id;
+    private int id;
 
     public int getId() {
         return id;
     }
 
+    private String lastname;
 
+    public String getLastname() {
+        return lastname;
+    }
 
+    private String firstname;
 
-
-    private String lastName;
-
-    public String getLastName() {
-        return lastName;
+    public String getFirstname() {
+        return firstname;
     }
 
     private Date birthdayDate;
@@ -90,5 +100,5 @@ public class Friend {
 
     public void setAutoSend(Boolean autoSend) {
         this.autoSend = autoSend;
-    }*/
+    }
 }

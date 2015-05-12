@@ -41,7 +41,7 @@ public class FriendArrayAdapter extends ArrayAdapter<Friend> {
         image.setImageResource(R.drawable.paperone);
 
         TextView tv = (TextView) view.findViewById(R.id.nomeFriend);
-        tv.setText(amico.getFirstName());
+        tv.setText(amico.getFirstname());
 
 
         return view;
