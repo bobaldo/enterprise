@@ -63,7 +63,7 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
 
         ArrayList<String> permission = new ArrayList<String>();
         permission.add("public_profile");
-        permission.add("nonapp_friends");
+        //permission.add("nonapp_friends");
         permission.add("user_friends");
        /* ParseFacebookUtils.logInInBackground(AccessToken.getCurrentAccessToken(), new LogInCallback() {
             public void done(ParseUser user, ParseException e) {
