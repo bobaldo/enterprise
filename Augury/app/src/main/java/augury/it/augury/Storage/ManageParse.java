@@ -12,6 +12,8 @@ import augury.it.augury.Utility.Constants;
  */
 public class ManageParse {
     public void autenticate(String username, String password) {
+
+
     }
 
     public void insert(Friend friend) {

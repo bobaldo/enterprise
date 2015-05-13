@@ -12,10 +12,16 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.facebook.AccessToken;
+import com.facebook.GraphRequest;
+import com.facebook.GraphRequestAsyncTask;
+import com.facebook.GraphResponse;
 import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseFacebookUtils;
 import com.parse.ParseUser;
+
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -56,7 +62,9 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
         lista.setOnItemClickListener(this);
 
         ArrayList<String> permission = new ArrayList<String>();
-        permission.add("friends_birthday");
+        permission.add("public_profile");
+        permission.add("nonapp_friends");
+        permission.add("user_friends");
        /* ParseFacebookUtils.logInInBackground(AccessToken.getCurrentAccessToken(), new LogInCallback() {
             public void done(ParseUser user, ParseException e) {
                 if (user != null) {
@@ -79,7 +87,7 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
            }
        });*/
 
-        ParseFacebookUtils.logInWithReadPermissionsInBackground(this, Arrays.asList("public_profile"), new LogInCallback() {
+        ParseFacebookUtils.logInWithReadPermissionsInBackground(this, permission, new LogInCallback() {
             @Override
             public void done(ParseUser user, ParseException err) {
                 if (user == null) {
@@ -95,6 +103,8 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
                     Toast.makeText(getApplicationContext(), "ciao", Toast.LENGTH_SHORT).show();
                     //Toast toast = Toast.makeText(getApplicationContext(), "LogIn. User signed up and logged in through Facebook!", Toast.LENGTH_SHORT);
                 } else {
+                    saveUserInfo(user);
+                    manageFacebook.addAllFriends(manageParse);
                     listaAmici = manageFacebook.getFriends();
                     adapter = new FriendArrayAdapter(context, R.layout.lista_friend, listaAmici);
                     setListAdapter(adapter);
@@ -104,6 +114,20 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
                 }
             }
         });
+    }
+
+    private void saveUserInfo(final ParseUser userParse) {
+
+        GraphRequestAsyncTask request = GraphRequest.newMeRequest(AccessToken.getCurrentAccessToken(), new GraphRequest.GraphJSONObjectCallback() {
+            @Override
+            public void onCompleted(JSONObject user, GraphResponse response) {
+                if (user != null) {
+                    userParse.put("idFacebook", user.optString("id"));
+                    userParse.put("nameFacebook", user.optString("name"));
+                    userParse.saveEventually();
+                }
+            }
+        }).executeAsync();
     }
 
     @Override
