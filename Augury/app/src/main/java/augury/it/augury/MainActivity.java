@@ -16,6 +16,7 @@ import com.facebook.AccessToken;
 import com.facebook.GraphRequest;
 import com.facebook.GraphRequestAsyncTask;
 import com.facebook.GraphResponse;
+import com.facebook.Profile;
 import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseFacebookUtils;
@@ -99,6 +100,8 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
 
                     adapter = new FriendArrayAdapter(context, R.layout.lista_friend, listaAmici);
                     setListAdapter(adapter);
+                    //Profile utente = new Profile(null );
+                    //utente.getFirstName();
                     Log.d("MyApp", "LogIn. User signed up and logged in through Facebook!");
                     Toast.makeText(getApplicationContext(), "ciao", Toast.LENGTH_SHORT).show();
                     //Toast toast = Toast.makeText(getApplicationContext(), "LogIn. User signed up and logged in through Facebook!", Toast.LENGTH_SHORT);

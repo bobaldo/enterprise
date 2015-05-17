@@ -1,0 +1,207 @@
+{
+"d" : {
+"results" : [
+{
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 0, "Cgid_102338" : "1", "Canno_collo_2140412466" : "1773", "Cubicazione_613823549" : "Ponte Vecchio - c/o colonna dx  lato S. Mauro", "Clocalita_1900805451" : "CESENA", "Copera_105948115" : "Lapide a Vitaliano Borromeo", "Cnum_docu_1889242282" : "58", "Cthe_geom_1096086090" : "0101000020E610000027E1086D22772840520BE6E220114640", "Cglatitude_1370772947" : "44.1338161109221", "Cglongitude_1371311400" : "12.2326845239009"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 1, "Cgid_102338" : "2", "Canno_collo_2140412466" : "1962", "Cubicazione_613823549" : "Subb Brenzaglia via Savio S. Michele-Ponte Vecchio", "Clocalita_1900805451" : "CESENA", "Copera_105948115" : "Cappella ai Caduti della Parrocchia di S.Michele", "Cnum_docu_1889242282" : "59", "Cthe_geom_1096086090" : "0101000020E61000009B48BE9A0F7728407C417E0720114640", "Cglatitude_1370772947" : "44.1337899557575", "Cglongitude_1371311400" : "12.2325409276275"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 2, "Cgid_102338" : "3", "Canno_collo_2140412466" : "0", "Cubicazione_613823549" : "Via Pasolini (cv. 19)", "Clocalita_1900805451" : "CESENA", "Copera_105948115" : "Lapide a Pietro Pasolini Casa", "Cnum_docu_1889242282" : "60", "Cthe_geom_1096086090" : "0101000020E6100000F7138ECB397C28409E200FA6DE114640", "Cglatitude_1370772947" : "44.1396071981301", "Cglongitude_1371311400" : "12.2426284418998"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 3, "Cgid_102338" : "4", "Canno_collo_2140412466" : "1790", "Cubicazione_613823549" : "Galleria Almerici", "Clocalita_1900805451" : "CESENA", "Copera_105948115" : "Lapide e fregi a S.S Papa PioVI", "Cnum_docu_1889242282" : "61", "Cthe_geom_1096086090" : "0101000020E610000056DC2A88057D2840B0987E48AD114640", "Cglatitude_1370772947" : "44.1381006830355", "Cglongitude_1371311400" : "12.2441828300781"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 4, "Cgid_102338" : "5", "Canno_collo_2140412466" : "0", "Cubicazione_613823549" : "Viale Carducci (cv.29)", "Clocalita_1900805451" : "CESENA", "Copera_105948115" : "Lapide a Renato Serra Casa Natale", "Cnum_docu_1889242282" : "62", "Cthe_geom_1096086090" : "0101000020E61000006A020ED0A97E28409FF508B8CD114640", "Cglatitude_1370772947" : "44.139090542197", "Cglongitude_1371311400" : "12.2473893181898"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 5, "Cgid_102338" : "6", "Canno_collo_2140412466" : "0", "Cubicazione_613823549" : "Via Strinati (cv. 59)", "Clocalita_1900805451" : "CESENA", "Copera_105948115" : "Lapide a Pietro Roverella", "Cnum_docu_1889242282" : "63", "Cthe_geom_1096086090" : "0101000020E6100000399611EA157D28402EE784BB75114640", "Cglatitude_1370772947" : "44.1364054106656", "Cglongitude_1371311400" : "12.244307818076"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 6, "Cgid_102338" : "7", "Canno_collo_2140412466" : "1942", "Cubicazione_613823549" : "Via Milani (cv. 20)", "Clocalita_1900805451" : "CESENA", "Copera_105948115" : "Lapide a S.S Papa PioVII Chiaramonti", "Cnum_docu_1889242282" : "64", "Cthe_geom_1096086090" : "0101000020E6100000E385439A817D284027C5F1A260114640", "Cglatitude_1370772947" : "44.1357616119879", "Cglongitude_1371311400" : "12.2451294143129"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 7, "Cgid_102338" : "8", "Canno_collo_2140412466" : "0", "Cubicazione_613823549" : "Corso Garibaldi (cv. 66)", "Clocalita_1900805451" : "CESENA", "Copera_105948115" : "Lapide a Paolo Neri", "Cnum_docu_1889242282" : "65", "Cthe_geom_1096086090" : "0101000020E6100000C3E56001767F28406CFCCF0C6D114640", "Cglatitude_1370772947" : "44.1361404433781", "Cglongitude_1371311400" : "12.2489471846374"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 8, "Cgid_102338" : "9", "Canno_collo_2140412466" : "1903", "Cubicazione_613823549" : "Viale  Mazzoni (cv. 20)", "Clocalita_1900805451" : "CESENA", "Copera_105948115" : "Lapide a Eduardo Fabbri Casa Natale", "Cnum_docu_1889242282" : "66", "Cthe_geom_1096086090" : "0101000020E61000007EEEBE2AED7A284049C396199E114640", "Cglatitude_1370772947" : "44.1376373277804", "Cglongitude_1371311400" : "12.2400906904288"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 9, "Cgid_102338" : "10", "Canno_collo_2140412466" : "2002", "Cubicazione_613823549" : "Corso Cavour (cv. 19)", "Clocalita_1900805451" : "CESENA", "Copera_105948115" : "Lapide a Don Carlo Baronio Casa Natale", "Cnum_docu_1889242282" : "67", "Cthe_geom_1096086090" : "0101000020E61000008BB447BC627E2840838A1428ED114640", "Cglatitude_1370772947" : "44.1400499439524", "Cglongitude_1371311400" : "12.2468470418483"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 10, "Cgid_102338" : "11", "Canno_collo_2140412466" : "1979", "Cubicazione_613823549" : "Corso Cavour (cv. 34)", "Clocalita_1900805451" : "CESENA", "Copera_105948115" : "Lapide a Elmo Simoncini", "Cnum_docu_1889242282" : "68", "Cthe_geom_1096086090" : "0101000020E6100000D0944B65CF7E284032283A96FF114640", "Cglatitude_1370772947" : "44.1406123908968", "Cglongitude_1371311400" : "12.2476760535014"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 11, "Cgid_102338" : "12", "Canno_collo_2140412466" : "1992", "Cubicazione_613823549" : "Via Mulini - Giardino c/o mura ex Macello", "Clocalita_1900805451" : "CESENA", "Copera_105948115" : "Lapide ai Ragazzi del 99", "Cnum_docu_1889242282" : "69", "Cthe_geom_1096086090" : "0101000020E610000004D7E804797A2840BAAAF21B24124640", "Cglatitude_1370772947" : "44.1417269644639", "Cglongitude_1371311400" : "12.2392045530537"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 12, "Cgid_102338" : "13", "Canno_collo_2140412466" : "1918", "Cubicazione_613823549" : "Piazza Guidazzi - c/o facciata  Teatro Bonci", "Clocalita_1900805451" : "CESENA", "Copera_105948115" : "Lapide a Cesare Battisti", "Cnum_docu_1889242282" : "70", "Cthe_geom_1096086090" : "0101000020E610000050FC4417217F2840C72A2FE96B114640", "Cglatitude_1370772947" : "44.1361056785877", "Cglongitude_1371311400" : "12.2482993385039"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 13, "Cgid_102338" : "14", "Canno_collo_2140412466" : "2003", "Cubicazione_613823549" : "Via S. Mauro - c/o ristorante Rugantino", "Clocalita_1900805451" : "CESENA", "Copera_105948115" : "Lapide al Comitato di Liberazione Naz", "Cnum_docu_1889242282" : "71", "Cthe_geom_1096086090" : "0101000020E6100000027337827D6E28401EC8F8BD24114640", "Cglatitude_1370772947" : "44.1339337792162", "Cglongitude_1371311400" : "12.2158013050735"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 14, "Cgid_102338" : "15", "Canno_collo_2140412466" : "2006", "Cubicazione_613823549" : "Via Don Carlo Baronio", "Clocalita_1900805451" : "CESENA", "Copera_105948115" : "Lapide a Don Carlo Baronio", "Cnum_docu_1889242282" : "72", "Cthe_geom_1096086090" : "0101000020E6100000909F1D57598228403C715BAC9F114640", "Cglatitude_1370772947" : "44.1376853415008", "Cglongitude_1371311400" : "12.2545878623639"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 15, "Cgid_102338" : "16", "Canno_collo_2140412466" : "2006", "Cubicazione_613823549" : "Piazza del Libro", "Clocalita_1900805451" : "S. CARLO", "Copera_105948115" : "Monumento a Michele Alboreto", "Cnum_docu_1889242282" : "73", "Cthe_geom_1096086090" : "0101000020E61000006E5A256DFB622840055DA709730B4640", "Cglatitude_1370772947" : "44.0894481723026", "Cglongitude_1371311400" : "12.193324480829"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 16, "Cgid_102338" : "17", "Canno_collo_2140412466" : "1923", "Cubicazione_613823549" : "Via S. Mamante - c/o cimitero S. Carlo", "Clocalita_1900805451" : "S. CARLO", "Copera_105948115" : "Lapide ai Caduti per l'Italia", "Cnum_docu_1889242282" : "74", "Cthe_geom_1096086090" : "0101000020E6100000A852A7B04F60284056568B7EFB0A4640", "Cglatitude_1370772947" : "44.0857999973638", "Cglongitude_1371311400" : "12.1881079868557"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 17, "Cgid_102338" : "18", "Canno_collo_2140412466" : "1957", "Cubicazione_613823549" : "Via Castiglione", "Clocalita_1900805451" : "S. CARLO", "Copera_105948115" : "Monumento Caduti di tutte le Guerre Castiglione", "Cnum_docu_1889242282" : "75", "Cthe_geom_1096086090" : "0101000020E6100000FE75825DF5622840AA18CF915D0B4640", "Cglatitude_1370772947" : "44.0887930165494", "Cglongitude_1371311400" : "12.1932782384638"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 18, "Cgid_102338" : "19", "Canno_collo_2140412466" : "0", "Cubicazione_613823549" : "Via S. Vittore - adiacente scuola elementare", "Clocalita_1900805451" : "S. VITTORE", "Copera_105948115" : "Monumento ai Caduti per la Patria via SVittore", "Cnum_docu_1889242282" : "76", "Cthe_geom_1096086090" : "0101000020E6100000D3A724F938652840B0EE5785BC0D4640", "Cglatitude_1370772947" : "44.1073157004697", "Cglongitude_1371311400" : "12.1977002961393"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 19, "Cgid_102338" : "20", "Canno_collo_2140412466" : "1961", "Cubicazione_613823549" : "Via Cervese (cv. 2554) - c/o Circolo Endas", "Clocalita_1900805451" : "VILLA CHIAVICHE", "Copera_105948115" : "Busto a Garibaldi via Cervese", "Cnum_docu_1889242282" : "77", "Cthe_geom_1096086090" : "0101000020E610000002D5C3B7088C284051BFB720BC144640", "Cglatitude_1370772947" : "44.1619912049488", "Cglongitude_1371311400" : "12.2735040117791"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 20, "Cgid_102338" : "21", "Canno_collo_2140412466" : "1982", "Cubicazione_613823549" : "Via Cervese angolo via Asiago", "Clocalita_1900805451" : "VILLA CHIAVICHE", "Copera_105948115" : "Scultura di Luigi Gobbi", "Cnum_docu_1889242282" : "78", "Cthe_geom_1096086090" : "0101000020E6100000B59BAC66578C2840AE8A4436D5144640", "Cglatitude_1370772947" : "44.1627567133595", "Cglongitude_1371311400" : "12.2741043172553"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 21, "Cgid_102338" : "22", "Canno_collo_2140412466" : "1987", "Cubicazione_613823549" : "Via Cervese angolo via Asiago", "Clocalita_1900805451" : "VILLA CHIAVICHE", "Copera_105948115" : "Lapide a Luigi Gobbi", "Cnum_docu_1889242282" : "79", "Cthe_geom_1096086090" : "0101000020E6100000C432D2E3568C28406078BA9CD4144640", "Cglatitude_1370772947" : "44.1627384100436", "Cglongitude_1371311400" : "12.2741004175272"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 22, "Cgid_102338" : "23", "Canno_collo_2140412466" : "2001", "Cubicazione_613823549" : "Rotonda Pertini", "Clocalita_1900805451" : "CESENA", "Copera_105948115" : "Scultura Madonna del terzo millennio di Savelli", "Cnum_docu_1889242282" : "80", "Cthe_geom_1096086090" : "0101000020E610000028EEE2A0E77B28403B2CB6EFF0104640", "Cglatitude_1370772947" : "44.132352794601", "Cglongitude_1371311400" : "12.2420015599265"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 23, "Cgid_102338" : "24", "Canno_collo_2140412466" : "1951", "Cubicazione_613823549" : "Via Medri angolo via Galimberti", "Clocalita_1900805451" : "MARTORANO", "Copera_105948115" : "Monumento ai Caduti per la Patria via Medri", "Cnum_docu_1889242282" : "81", "Cthe_geom_1096086090" : "0101000020E610000025314203E07C28402D97B1C2A9154640", "Cglatitude_1370772947" : "44.1692431800023", "Cglongitude_1371311400" : "12.2438965814877"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 24, "Cgid_102338" : "25", "Canno_collo_2140412466" : "0", "Cubicazione_613823549" : "Via Ravennate angolo Via Ronta", "Clocalita_1900805451" : "RONTA", "Copera_105948115" : "Monumento ai Caduti delle Guerre via Ravennate", "Cnum_docu_1889242282" : "82", "Cthe_geom_1096086090" : "0101000020E61000000F62BF2B287C2840FC2DB49799184640", "Cglatitude_1370772947" : "44.1921872739585", "Cglongitude_1371311400" : "12.242493979561"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 25, "Cgid_102338" : "26", "Canno_collo_2140412466" : "0", "Cubicazione_613823549" : "Via Montaletto - c/o Giardino dei Ciliegi", "Clocalita_1900805451" : "S. GIORGIO", "Copera_105948115" : "Monumento Caduti di tutte le Guerre Montaletto", "Cnum_docu_1889242282" : "83", "Cthe_geom_1096086090" : "0101000020E61000009735CF8B968F28400B168C34EF184640", "Cglatitude_1370772947" : "44.1947999652876", "Cglongitude_1371311400" : "12.2804454508248"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 26, "Cgid_102338" : "27", "Canno_collo_2140412466" : "1926", "Cubicazione_613823549" : "Via Chiesa di S. Cristoforo", "Clocalita_1900805451" : "S. CRISTOFORO", "Copera_105948115" : "Monumento ai Caduti della grande Guerra", "Cnum_docu_1889242282" : "84", "Cthe_geom_1096086090" : "0101000020E6100000C570934F736728405D6F970A9F174640", "Cglatitude_1370772947" : "44.1845410575322", "Cglongitude_1371311400" : "12.2020516269189"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 27, "Cgid_102338" : "28", "Canno_collo_2140412466" : "1982", "Cubicazione_613823549" : "Via Chiesa di S. Andrea in B. - c/o parco Chiesa", "Clocalita_1900805451" : "S. ANDREA IN BAGNOLO", "Copera_105948115" : "Monumento ai Caduti delle due Guerre", "Cnum_docu_1889242282" : "85", "Cthe_geom_1096086090" : "0101000020E6100000D70C7579DA6E2840D10D929E5B1A4640", "Cglatitude_1370772947" : "44.2059210026888", "Cglongitude_1371311400" : "12.2165105777153"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 28, "Cgid_102338" : "29", "Canno_collo_2140412466" : "2004", "Cubicazione_613823549" : "Via Sorrivoli angolo via Celincordia", "Clocalita_1900805451" : "CESENA", "Copera_105948115" : "Lapide a Marco Pantani", "Cnum_docu_1889242282" : "86", "Cthe_geom_1096086090" : "0101000020E61000002AE3BDECFE7C2840BCE8DEAA4A0D4640", "Cglatitude_1370772947" : "44.1038411701606", "Cglongitude_1371311400" : "12.2441324216648"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 29, "Cgid_102338" : "30", "Canno_collo_2140412466" : "1970", "Cubicazione_613823549" : "Via Saffi - c/o campanile", "Clocalita_1900805451" : "CESENA", "Copera_105948115" : "Lapide alle Vittime della Seconda Guerra Mondiale", "Cnum_docu_1889242282" : "87", "Cthe_geom_1096086090" : "0101000020E6100000EDA0A68076782840BC33268B39114640", "Cglatitude_1370772947" : "44.1345685898336", "Cglongitude_1371311400" : "12.2352791026501"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 30, "Cgid_102338" : "31", "Canno_collo_2140412466" : "0", "Cubicazione_613823549" : "Via Renato Medri - c/o cimitero", "Clocalita_1900805451" : "GATTOLINO", "Copera_105948115" : "Monumento ai Caduti della seconda guerra mondiale", "Cnum_docu_1889242282" : "88", "Cthe_geom_1096086090" : "0101000020E610000012127C9643982840FA7629AEB6154640", "Cglatitude_1370772947" : "44.1696374609437", "Cglongitude_1371311400" : "12.2973906542257"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 31, "Cgid_102338" : "32", "Canno_collo_2140412466" : "0", "Cubicazione_613823549" : "Via Cerca - c/o cimitero", "Clocalita_1900805451" : "S. GIORGIO", "Copera_105948115" : "Lapide ai Caduti in guerra", "Cnum_docu_1889242282" : "89", "Cthe_geom_1096086090" : "0101000020E61000000AD45A5F308F2840FD6AE69A4D194640", "Cglatitude_1370772947" : "44.1976808190429", "Cglongitude_1371311400" : "12.2796659277319"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 32, "Cgid_102338" : "33", "Canno_collo_2140412466" : "2002", "Cubicazione_613823549" : "Via Don Secondo Farnedi - c/o area verde", "Clocalita_1900805451" : "S. GIORGIO", "Copera_105948115" : "Cippo a Eder e Maicol", "Cnum_docu_1889242282" : "90", "Cthe_geom_1096086090" : "0101000020E61000006A078239DB8E28406CA5FBBAC7184640", "Cglatitude_1370772947" : "44.1935952881566", "Cglongitude_1371311400" : "12.2790163012721"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 33, "Cgid_102338" : "34", "Canno_collo_2140412466" : "1944", "Cubicazione_613823549" : "Via Rovescio angolo via Masiera I", "Clocalita_1900805451" : "BAGNILE", "Copera_105948115" : "Cippo a Torello Latini e Pietro Maganza", "Cnum_docu_1889242282" : "91", "Cthe_geom_1096086090" : "0101000020E61000003A7098A7D7832840366D8FFBFA1B4640", "Cglatitude_1370772947" : "44.2185968828511", "Cglongitude_1371311400" : "12.2575046895582"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 34, "Cgid_102338" : "35", "Canno_collo_2140412466" : "0", "Cubicazione_613823549" : "Via Rovescio (cv. 2025)", "Clocalita_1900805451" : "BAGNILE", "Copera_105948115" : "Cippo ai Caduti delle guerre", "Cnum_docu_1889242282" : "92", "Cthe_geom_1096086090" : "0101000020E6100000F5C4FA734C88284077050AFA761C4640", "Cglatitude_1370772947" : "44.2223808812077", "Cglongitude_1371311400" : "12.2662082904448"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 35, "Cgid_102338" : "36", "Canno_collo_2140412466" : "0", "Cubicazione_613823549" : "Via Rovescio (cv. 2025) - c/o ex scuola materna", "Clocalita_1900805451" : "BAGNILE", "Copera_105948115" : "Lapide ai Caduti per la patria Guerra 1915_1918", "Cnum_docu_1889242282" : "93", "Cthe_geom_1096086090" : "0101000020E61000008AE7FE2434882840F889493A771C4640", "Cglatitude_1370772947" : "44.2223885401799", "Cglongitude_1371311400" : "12.266022831074"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 36, "Cgid_102338" : "37", "Canno_collo_2140412466" : "0", "Cubicazione_613823549" : "Via Rovescio (cv. 2025) - c/o ex scuola materna", "Clocalita_1900805451" : "BAGNILE", "Copera_105948115" : "Lapide ai Martiri della Liberta", "Cnum_docu_1889242282" : "94", "Cthe_geom_1096086090" : "0101000020E610000085EC37F63B8828402141D45C771C4640", "Cglatitude_1370772947" : "44.2223926578902", "Cglongitude_1371311400" : "12.2660824721591"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 37, "Cgid_102338" : "38", "Canno_collo_2140412466" : "1944", "Cubicazione_613823549" : "Via S. Giorgio angolo via Cerchia S. Martino", "Clocalita_1900805451" : "S.GIORGIO", "Copera_105948115" : "Cippo ad Agapito Latini e Virgilio Lucci", "Cnum_docu_1889242282" : "95", "Cthe_geom_1096086090" : "0101000020E61000001B82422F8C8D2840E1C0CD8C7C1A4640", "Cglatitude_1370772947" : "44.2069259647994", "Cglongitude_1371311400" : "12.2764601486861"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 38, "Cgid_102338" : "39", "Canno_collo_2140412466" : "0", "Cubicazione_613823549" : "Rotonda Martiri ponte di Ruffio", "Clocalita_1900805451" : "RUFFIO", "Copera_105948115" : "Monumento ai Caduti per la Liberta", "Cnum_docu_1889242282" : "96", "Cthe_geom_1096086090" : "0101000020E6100000CC13B0A1329E2840274F3CE355134640", "Cglatitude_1370772947" : "44.151058582733", "Cglongitude_1371311400" : "12.3089800383986"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 39, "Cgid_102338" : "40", "Canno_collo_2140412466" : "0", "Cubicazione_613823549" : "Rotonda Martiri ponte di Ruffio", "Clocalita_1900805451" : "RUFFIO", "Copera_105948115" : "Monumento Madonnina Rotonda Martiri Ponte di Ruffi", "Cnum_docu_1889242282" : "97", "Cthe_geom_1096086090" : "0101000020E61000002D44CE924D9E284075E0DCB95B134640", "Cglatitude_1370772947" : "44.1512367561817", "Cglongitude_1371311400" : "12.3091855885305"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 40, "Cgid_102338" : "41", "Canno_collo_2140412466" : "1907", "Cubicazione_613823549" : "Via Cesenatico (cv. 5735) - c/o scuola elementare", "Clocalita_1900805451" : "MACERONE", "Copera_105948115" : "Lapide a Giuseppe Mazzini Via Cesenatico", "Cnum_docu_1889242282" : "98", "Cthe_geom_1096086090" : "0101000020E6100000A221C3E282A9284053C367ABED134640", "Cglatitude_1370772947" : "44.1556905991225", "Cglongitude_1371311400" : "12.3310767043302"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 41, "Cgid_102338" : "42", "Canno_collo_2140412466" : "1933", "Cubicazione_613823549" : "Via Cesenatico (cv. 5735) - c/o scuola elementare", "Clocalita_1900805451" : "MACERONE", "Copera_105948115" : "Lapide ai Caduti di Macerone Guerra 15_18", "Cnum_docu_1889242282" : "99", "Cthe_geom_1096086090" : "0101000020E6100000FB00B1BE8CA92840E9083114EE134640", "Cglatitude_1370772947" : "44.1557030906132", "Cglongitude_1371311400" : "12.3311519232816"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 42, "Cgid_102338" : "43", "Canno_collo_2140412466" : "1907", "Cubicazione_613823549" : "Via Cesenatico (cv. 5735) - c/o scuola elementare", "Clocalita_1900805451" : "MACERONE", "Copera_105948115" : "Lapide a Giuseppe Garibaldi via Cesenatico", "Cnum_docu_1889242282" : "100", "Cthe_geom_1096086090" : "0101000020E610000045F30DF495A928407107017CEE134640", "Cglatitude_1370772947" : "44.1557154660249", "Cglongitude_1371311400" : "12.3312221781758"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 43, "Cgid_102338" : "44", "Canno_collo_2140412466" : "0", "Cubicazione_613823549" : "Via Calisese - c/o Chiesa", "Clocalita_1900805451" : "CALISESE", "Copera_105948115" : "Monumento ai Caduti delle guerre via Calisese", "Cnum_docu_1889242282" : "101", "Cthe_geom_1096086090" : "0101000020E6100000785E63E2779828402670B76CDC0C4640", "Cglatitude_1370772947" : "44.1004768272108", "Cglongitude_1371311400" : "12.2977896448422"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 44, "Cgid_102338" : "45", "Canno_collo_2140412466" : "2001", "Cubicazione_613823549" : "Via Calisese - vicino al cimitero", "Clocalita_1900805451" : "CALISESE", "Copera_105948115" : "Busto a Giulio Cesare", "Cnum_docu_1889242282" : "102", "Cthe_geom_1096086090" : "0101000020E610000082433BC8C498284063927F81E70C4640", "Cglatitude_1370772947" : "44.1008149979505", "Cglongitude_1371311400" : "12.2983763286918"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 45, "Cgid_102338" : "46", "Canno_collo_2140412466" : "1906", "Cubicazione_613823549" : "Via Fiorenzuola (cv. 1176)", "Clocalita_1900805451" : "CASE FINALI", "Copera_105948115" : "Lapide a Gaspare Finali via Fiorenzuola", "Cnum_docu_1889242282" : "103", "Cthe_geom_1096086090" : "0101000020E610000014B5C171A388284019ECA1FFE6104640", "Cglatitude_1370772947" : "44.1320495167385", "Cglongitude_1371311400" : "12.2668719815215"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 46, "Cgid_102338" : "47", "Canno_collo_2140412466" : "2006", "Cubicazione_613823549" : "Via Gadda angolo via Rodari - c/o area verde", "Clocalita_1900805451" : "CASE FINALI", "Copera_105948115" : "Cippo a Sanzio Togni", "Cnum_docu_1889242282" : "104", "Cthe_geom_1096086090" : "0101000020E610000035AAF2C6C48A2840097142DA42114640", "Cglatitude_1370772947" : "44.1348526787206", "Cglongitude_1371311400" : "12.2710325404379"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 47, "Cgid_102338" : "48", "Canno_collo_2140412466" : "0", "Cubicazione_613823549" : "Rotonda Madonna del Dipanatoio", "Clocalita_1900805451" : "PONTE PIETRA", "Copera_105948115" : "Celletta", "Cnum_docu_1889242282" : "105", "Cthe_geom_1096086090" : "0101000020E6100000E39B2875619128405C8D39C5FF114640", "Cglatitude_1370772947" : "44.1406179934517", "Cglongitude_1371311400" : "12.2839466678688"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 48, "Cgid_102338" : "49", "Canno_collo_2140412466" : "0", "Cubicazione_613823549" : "Via Capannaguzzo (cv. 1481) - c/o Chiesa", "Clocalita_1900805451" : "BULGARNO'", "Copera_105948115" : "Monumento ai Caduti via Capannaguzzo", "Cnum_docu_1889242282" : "106", "Cthe_geom_1096086090" : "0101000020E6100000EEE2D724EDAB28408C119FCA20114640", "Cglatitude_1370772947" : "44.1338132168486", "Cglongitude_1371311400" : "12.33579363952"
+}, {
+"__metadata" : {
+"uri" : "http://www.datiopen.it/Proxy.svc/2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'('row_id')", "type" : "http://odata.statportal.it.2-'8479004c-940b-4b65-9015-8c2600586f4c@datiopen'"
+}, "row_id" : 49, "Cgid_102338" : "50", "Canno_collo_2140412466" : "0", "Cubicazione_613823549" : "Via Chiesa di Casale", "Clocalita_1900805451" : "CASALE", "Copera_105948115" : "Monumento ai Caduti via Chiesa di Casale", "Cnum_docu_1889242282" : "107", "Cthe_geom_1096086090" : "0101000020E6100000CA20ED12D28E28405645EB7F59094640", "Cglatitude_1370772947" : "44.0730438135894", "Cglongitude_1371311400" : "12.2789464868987"
+}
+], "__count" : "0"
+}
+}
