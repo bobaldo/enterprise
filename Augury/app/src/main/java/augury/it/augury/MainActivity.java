@@ -63,8 +63,7 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
 
         ArrayList<String> permission = new ArrayList<String>();
         permission.add("public_profile");
-        //permission.add("nonapp_friends");
-        permission.add("user_friends");
+
        /* ParseFacebookUtils.logInInBackground(AccessToken.getCurrentAccessToken(), new LogInCallback() {
             public void done(ParseUser user, ParseException e) {
                 if (user != null) {
@@ -96,7 +95,8 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
 
                     //Toast toast = Toast.makeText(getApplicationContext(), "LogIn. The user cancelled the Facebook login.", Toast.LENGTH_SHORT);
                 } else if (user.isNew()) {
-                    listaAmici = manageFacebook.getFriends();
+                    listaAmici = manageFacebook.getFriends(manageParse);
+
                     adapter = new FriendArrayAdapter(context, R.layout.lista_friend, listaAmici);
                     setListAdapter(adapter);
                     Log.d("MyApp", "LogIn. User signed up and logged in through Facebook!");
@@ -104,7 +104,7 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
                     //Toast toast = Toast.makeText(getApplicationContext(), "LogIn. User signed up and logged in through Facebook!", Toast.LENGTH_SHORT);
                 } else {
                     saveUserInfo(user);
-                    manageFacebook.addAllFriends(manageParse);
+                    manageFacebook.getAllFriends();
                     listaAmici = manageFacebook.getFriends();
                     adapter = new FriendArrayAdapter(context, R.layout.lista_friend, listaAmici);
                     setListAdapter(adapter);

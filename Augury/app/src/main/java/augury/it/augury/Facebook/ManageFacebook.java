@@ -1,6 +1,7 @@
 package augury.it.augury.Facebook;
 
 import android.app.Application;
+import android.app.DownloadManager;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -9,6 +10,8 @@ import com.facebook.GraphRequest;
 import com.facebook.GraphRequestAsyncTask;
 import com.facebook.GraphRequestBatch;
 import com.facebook.GraphResponse;
+import com.facebook.HttpMethod;
+import com.parse.ParseObject;
 import com.parse.ParseUser;
 
 import org.json.JSONArray;
@@ -41,12 +44,57 @@ public class ManageFacebook {
         return friends;
     }
 
-    public void addAllFriends(final ManageParse manageParse){
+    public void getAllFriends(final ManageParse manageParse){
+        Bundle parameters = new Bundle();
+        parameters.putString("fields", "id,first_name,last_name,picture");
+        parameters.putString("limit", "5000");
+
+        GraphRequest req = new GraphRequest(
+                AccessToken.getCurrentAccessToken(),
+                "/me/taggable_friends",
+                null,
+                HttpMethod.GET,
+                new GraphRequest.Callback() {
+                    @Override
+                    public void onCompleted(GraphResponse response) {
+                            try {
+                                JSONObject jsonObj= response.getJSONObject();
+                                JSONArray jsonArray = jsonObj.getJSONArray("data");
+                                ParseObject fri = new ParseObject("Friend");
+                                for (int i = 0; i < jsonArray.length(); i++) {
+
+                                    try {
+                                        int gg = jsonArray.length();
+                                        JSONObject obj = jsonArray.getJSONObject(i);
+
+                                        //ParseObject fri = new ParseObject("Friend");
+                                        fri.put("firstname", obj.get("first_name"));
+                                        fri.put("lastname", obj.get("last_name"));
+                                        fri.saveInBackground();
+                                        System.out.println("Inserito friends numero "+i);
+
+                                    } catch (JSONException e) {
+                                        e.printStackTrace();
+                                    }
+
+                                }
+
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+
+                    }
+                });
+        req.setParameters(parameters);
+        req.executeAsync();
+
+    }
+
+    /*public void addAllFriends(final ManageParse manageParse){
         //GraphRequestAsyncTask request = GraphRequest.newMyFriendsRequest(AccessToken.getCurrentAccessToken(), new GraphRequest.GraphJSONArrayCallback() {
 
         Bundle params = new Bundle();
         params.putString("fields", "id,first_name,birthday");
-
 
 
                     GraphRequest g = GraphRequest.newMyFriendsRequest(AccessToken.getCurrentAccessToken(), new GraphRequest.GraphJSONArrayCallback() {
@@ -85,7 +133,7 @@ public class ManageFacebook {
 
 
 
-            /*@Override
+            @Override
             public void onCompleted(JSONArray jsonArray, GraphResponse response) {
                 for (int i = 0; i < jsonArray.length(); i++) {
 
@@ -101,11 +149,11 @@ public class ManageFacebook {
 
                 }
             }
-        }).executeAsync();*/
+        }).executeAsync();
 
-        /*Bundle parameters = new Bundle();
+        Bundle parameters = new Bundle();
         parameters.putString("fields", "id,first_name,last_name, birthday");
         request.setParameters(parameters);
-        request.executeAsync();*/
-    }
+        request.executeAsync();
+    }*/
 }
