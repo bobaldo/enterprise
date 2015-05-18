@@ -70,7 +70,7 @@ public class ManageFacebook {
                                         //ParseObject fri = new ParseObject("Friend");
                                         fri.put("firstname", obj.get("first_name"));
                                         fri.put("lastname", obj.get("last_name"));
-                                        //TODO: deve memorizzare lo user dell'utente attuale che poi è quello relativo agli amici
+                                        //TODO: deve memorizzare lo user dell'utente attuale che poi e' quello relativo agli amici
                                         fri.saveInBackground();
                                         System.out.println("Inserito friends numero "+i);
 
