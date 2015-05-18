@@ -20,11 +20,9 @@ public class ManageParse {
         ParseObject testObject = new ParseObject(Constants.FRIEND);
         testObject.put(Constants.FIRSTNAME, friend.getFirstname());
         testObject.put(Constants.LASTNAME, friend.getLastname());
-        testObject.put(Constants.BIRTHDATE, friend.getBirthdayDate());
         testObject.put(Constants.ISDELETE, friend.getIsDelete());
         testObject.put(Constants.IDFACEBOOK, friend.getIdFacebook());
         testObject.put(Constants.IMAGEURL, friend.getImageUrl());
-        testObject.put(Constants.AUTOSEND, friend.getAutoSend());
         testObject.saveEventually();
     }
 
@@ -39,6 +37,12 @@ public class ManageParse {
     }
 
     public List<Friend> get() {
+        return null;
+    }
+
+    public List<Friend> getFriends() {
+        //TODO: va su parse e con lo user atuale recupera i propri amici
+
         return null;
     }
 }

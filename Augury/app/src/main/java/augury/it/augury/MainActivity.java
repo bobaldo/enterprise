@@ -16,7 +16,6 @@ import com.facebook.AccessToken;
 import com.facebook.GraphRequest;
 import com.facebook.GraphRequestAsyncTask;
 import com.facebook.GraphResponse;
-import com.facebook.Profile;
 import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseFacebookUtils;
@@ -25,9 +24,6 @@ import com.parse.ParseUser;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 import augury.it.augury.Facebook.ManageFacebook;
@@ -96,19 +92,20 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
 
                     //Toast toast = Toast.makeText(getApplicationContext(), "LogIn. The user cancelled the Facebook login.", Toast.LENGTH_SHORT);
                 } else if (user.isNew()) {
-                    listaAmici = manageFacebook.getFriends(manageParse);
+                    //al momento non ce ne preoccupiamo
 
-                    adapter = new FriendArrayAdapter(context, R.layout.lista_friend, listaAmici);
-                    setListAdapter(adapter);
+                    //listaAmici = manageFacebook.getFriends();
+                    //adapter = new FriendArrayAdapter(context, R.layout.lista_friend, listaAmici);
+                    //setListAdapter(adapter);
                     //Profile utente = new Profile(null );
                     //utente.getFirstName();
-                    Log.d("MyApp", "LogIn. User signed up and logged in through Facebook!");
-                    Toast.makeText(getApplicationContext(), "ciao", Toast.LENGTH_SHORT).show();
+                    //Log.d("MyApp", "LogIn. User signed up and logged in through Facebook!");
+                    //Toast.makeText(getApplicationContext(), "ciao", Toast.LENGTH_SHORT).show();
                     //Toast toast = Toast.makeText(getApplicationContext(), "LogIn. User signed up and logged in through Facebook!", Toast.LENGTH_SHORT);
                 } else {
-                    saveUserInfo(user);
-                    manageFacebook.getAllFriends();
-                    listaAmici = manageFacebook.getFriends();
+                    //saveUserInfo(user);
+                    manageFacebook.saveFriends();
+                    listaAmici = manageParse.getFriends();
                     adapter = new FriendArrayAdapter(context, R.layout.lista_friend, listaAmici);
                     setListAdapter(adapter);
                     Log.d("MyApp", "LogIn. User logged in through Facebook!");

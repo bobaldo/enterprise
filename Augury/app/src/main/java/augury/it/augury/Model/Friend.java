@@ -18,33 +18,33 @@ public class Friend {
         this.lastname = lastName;
     }
 
-    public Friend(String firstname, String lastname, Date birthdayDate, String idFacebook,String imageUrl, Boolean autoSend) {
+    /*
+    public Friend(String firstname, String lastname, String idFacebook,String imageUrl, Boolean autoSend) {
         this.firstname = firstname;
         this.lastname = lastname;
-        this.birthdayDate = birthdayDate;
         this.idFacebook = idFacebook;
         this.imageUrl = imageUrl;
         this.autoSend = autoSend;
-    }
-
+    }*/
+    /*
     public void setFirstname(String firstname) {
         this.firstname = firstname;
-    }
+    }*/
 
-    //creato da un bundle
+    /*creato da un bundle
     public Friend(Bundle b) {
         if (b != null) {
             this.firstname = b.getString(Constants.FIRSTNAME);
 
         }
-    }
+    }*/
 
-    //Pacchetto dati da trasferire tra le varie activity
+    /*Pacchetto dati da trasferire tra le varie activity
     public Bundle toBundle() {
         Bundle b = new Bundle();
         b.putString(Constants.FIRSTNAME, this.firstname);
         return b;
-    }
+    }*/
 
     private int id;
 
@@ -64,11 +64,11 @@ public class Friend {
         return firstname;
     }
 
-    private Date birthdayDate;
+    //private Date birthdayDate;
 
-    public Date getBirthdayDate() {
-        return birthdayDate;
-    }
+    //public Date getBirthdayDate() {
+    //return birthdayDate;
+    //}
 
     private boolean isDelete;
 
@@ -94,11 +94,11 @@ public class Friend {
 
     private boolean autoSend;
 
-    public Boolean getAutoSend() {
-        return autoSend;
-    }
+    //public Boolean getAutoSend() {
+    //return autoSend;
+    //}
 
-    public void setAutoSend(Boolean autoSend) {
-        this.autoSend = autoSend;
-    }
+    //public void setAutoSend(Boolean autoSend) {
+    //this.autoSend = autoSend;
+    //}
 }

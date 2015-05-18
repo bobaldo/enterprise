@@ -44,7 +44,7 @@ public class ManageFacebook {
         return friends;
     }
 
-    public void getAllFriends(final ManageParse manageParse){
+    public void saveFriends(){
         Bundle parameters = new Bundle();
         parameters.putString("fields", "id,first_name,last_name,picture");
         parameters.putString("limit", "5000");
@@ -70,6 +70,7 @@ public class ManageFacebook {
                                         //ParseObject fri = new ParseObject("Friend");
                                         fri.put("firstname", obj.get("first_name"));
                                         fri.put("lastname", obj.get("last_name"));
+                                        //TODO: deve memorizzare lo user dell'utente attuale che poi è quello relativo agli amici
                                         fri.saveInBackground();
                                         System.out.println("Inserito friends numero "+i);
 
@@ -82,7 +83,6 @@ public class ManageFacebook {
                             } catch (Exception e) {
                                 e.printStackTrace();
                             }
-
                     }
                 });
         req.setParameters(parameters);
