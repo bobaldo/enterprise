@@ -1,15 +1,11 @@
 package augury.it.augury.Model;
 
-import android.os.Bundle;
-
-import java.util.Date;
-
-import augury.it.augury.Utility.Constants;
-
 /**
  * Created by Bobaldo on 08/05/2015.
  */
 public class Friend {
+    public Friend() {
+    }
 
     //for test
     //TODO: delete
@@ -17,34 +13,6 @@ public class Friend {
         this.firstname = firstName;
         this.lastname = lastName;
     }
-
-    /*
-    public Friend(String firstname, String lastname, String idFacebook,String imageUrl, Boolean autoSend) {
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.idFacebook = idFacebook;
-        this.imageUrl = imageUrl;
-        this.autoSend = autoSend;
-    }*/
-    /*
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
-    }*/
-
-    /*creato da un bundle
-    public Friend(Bundle b) {
-        if (b != null) {
-            this.firstname = b.getString(Constants.FIRSTNAME);
-
-        }
-    }*/
-
-    /*Pacchetto dati da trasferire tra le varie activity
-    public Bundle toBundle() {
-        Bundle b = new Bundle();
-        b.putString(Constants.FIRSTNAME, this.firstname);
-        return b;
-    }*/
 
     private int id;
 
@@ -63,12 +31,6 @@ public class Friend {
     public String getFirstname() {
         return firstname;
     }
-
-    //private Date birthdayDate;
-
-    //public Date getBirthdayDate() {
-    //return birthdayDate;
-    //}
 
     private boolean isDelete;
 
@@ -92,13 +54,15 @@ public class Friend {
         return imageUrl;
     }
 
-    private boolean autoSend;
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
 
-    //public Boolean getAutoSend() {
-    //return autoSend;
-    //}
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
 
-    //public void setAutoSend(Boolean autoSend) {
-    //this.autoSend = autoSend;
-    //}
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
 }

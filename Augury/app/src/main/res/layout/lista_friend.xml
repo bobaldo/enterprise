@@ -3,7 +3,12 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
+    <!--ImageView
+        android:id="@+id/icona"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content" /-->
+
+    <WebView
         android:id="@+id/icona"
         android:layout_width="300dp"
         android:layout_height="wrap_content" />
