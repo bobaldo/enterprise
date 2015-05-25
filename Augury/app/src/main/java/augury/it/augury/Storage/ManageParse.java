@@ -4,6 +4,10 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.widget.ListView;
 
+import com.facebook.AccessToken;
+import com.facebook.GraphRequest;
+import com.facebook.GraphRequestAsyncTask;
+import com.facebook.GraphResponse;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseObject;
@@ -98,6 +102,19 @@ public class ManageParse {
 
             }
         });
+    }
+
+    public static void saveUserInfo(final ParseUser userParse) {
+        GraphRequestAsyncTask request = GraphRequest.newMeRequest(AccessToken.getCurrentAccessToken(), new GraphRequest.GraphJSONObjectCallback() {
+            @Override
+            public void onCompleted(JSONObject user, GraphResponse response) {
+                if (user != null) {
+                    userParse.put("idFacebook", user.optString("id"));
+                    userParse.put("nameFacebook", user.optString("name"));
+                    userParse.saveEventually();
+                }
+            }
+        }).executeAsync();
     }
 
     public static boolean getIsLoad(ParseUser user) {

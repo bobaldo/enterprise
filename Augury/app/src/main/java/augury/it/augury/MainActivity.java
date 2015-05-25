@@ -48,7 +48,11 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
                     Log.d("MyApp", "LogIn. The user cancelled the Facebook login.");
                     Toast.makeText(getApplicationContext(), "Errore", Toast.LENGTH_SHORT).show();
                 } else if (user.isNew()) {
-                    //TODO: se utente è nuovo
+                    ManageParse.saveUserInfo(user);
+                    ManageFacebook.saveFriends(user);
+                    ManageParse.getFriends(user,
+                            listFriends,
+                            context);
                 } else {
                     ManageFacebook.saveFriends(user);
                     ManageParse.getFriends(user,
