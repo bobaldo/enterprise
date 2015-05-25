@@ -23,8 +23,6 @@ import augury.it.augury.Facebook.ManageFacebook;
 import augury.it.augury.Storage.ManageParse;
 
 public class MainActivity extends ListActivity implements AdapterView.OnItemClickListener {
-    //private ManageFacebook manageFacebook = new ManageFacebook();
-    //private ManageParse manageParse = new ManageParse();
     private ListView listFriends;
     private Context context;
 
@@ -36,29 +34,39 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
         listFriends = (ListView) findViewById(android.R.id.list);
         listFriends.setOnItemClickListener(this);
 
+        try {
+            ParseUser user = ParseUser.getCurrentUser();
+            if (user != null) {
+                if (ManageParse.getIsLoad(user)) {
+                    ManageParse.getFriends(user, listFriends, context);
+                } else {
+                    loginAndLoadFriends();
+                }
+            } else {
+                loginAndLoadFriends();
+            }
+        } catch (Exception ex) {
+            Toast.makeText(getApplicationContext(), "Errore", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void loginAndLoadFriends() {
         ArrayList<String> permission = new ArrayList<String>();
         permission.add("public_profile");
-
-        //TODO: controllare se l'utente esiste su parse e se ha già caricato i propri amici
-
         ParseFacebookUtils.logInWithReadPermissionsInBackground(this, permission, new LogInCallback() {
             @Override
             public void done(ParseUser user, ParseException err) {
                 if (user == null) {
                     Log.d("MyApp", "LogIn. The user cancelled the Facebook login.");
-                    Toast.makeText(getApplicationContext(), "Errore", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Errore nella creazione dell'utente - contattare il centro servizio", Toast.LENGTH_SHORT).show();
                 } else if (user.isNew()) {
                     ManageParse.saveUserInfo(user);
                     ManageFacebook.saveFriends(user);
-                    ManageParse.getFriends(user,
-                            listFriends,
-                            context);
+                    ManageParse.getFriends(user, listFriends, context);
+                    Log.d("MyApp", "LogIn. User logged in through Facebook!");
                 } else {
                     ManageFacebook.saveFriends(user);
-                    ManageParse.getFriends(user,
-                            listFriends,
-                            context);
-
+                    ManageParse.getFriends(user, listFriends, context);
                     Log.d("MyApp", "LogIn. User logged in through Facebook!");
                 }
             }
