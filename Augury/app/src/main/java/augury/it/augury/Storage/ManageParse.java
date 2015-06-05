@@ -25,18 +25,26 @@ import augury.it.augury.Model.Friend;
 import augury.it.augury.R;
 import augury.it.augury.Utility.Constants;
 
+
+
 /**
  * Created by Bobaldo on 30/04/2015.
  */
 public class ManageParse {
+
+    private final static String BUNDLE_AMICO = "bundleAmico";
+
+
     public void autenticate(String username, String password) {
     }
 
     public static void insert(JSONObject obj, ParseUser user) throws JSONException {
+        //Log.d("IMAGEURL",obj.toString() );
         ParseObject fri = new ParseObject(Constants.FRIEND);
         fri.put(Constants.FIRSTNAME, obj.get("first_name"));
         fri.put(Constants.LASTNAME, obj.get("last_name"));
         fri.put(Constants.IMAGEURL, obj.getJSONObject("picture").getJSONObject("data").getString("url"));
+        //new imageDownloader().execute;
         fri.put(Constants.ISDELETE, false);
         fri.put(Constants.USER, user);
         fri.saveInBackground();
@@ -95,6 +103,7 @@ public class ManageParse {
                         try {
                             FriendArrayAdapter adapter = new FriendArrayAdapter(context, R.layout.lista_friend, cursor);
                             listView.setAdapter(adapter);
+
                         } catch (NullPointerException e) {
                         }
                     }
@@ -103,6 +112,9 @@ public class ManageParse {
             }
         });
     }
+
+
+
 
     public static void saveUserInfo(final ParseUser userParse) {
         GraphRequestAsyncTask request = GraphRequest.newMeRequest(AccessToken.getCurrentAccessToken(), new GraphRequest.GraphJSONObjectCallback() {

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape
+            android:shape="rectangle"
+            android:tint="#493843"
+            android:tintMode="screen"
+            android:thickness="@dimen/abc_disabled_alpha_material_light"
+            android:thicknessRatio="@integer/abc_config_activityShortDur"
+            android:dither="true"
+            android:innerRadiusRatio="@integer/abc_config_activityShortDur"
+            android:useLevel="true"
+            android:innerRadius="20dp">
+
+
+                <corners android:radius="50dp"
+                    android:bottomLeftRadius="20dp"
+                 />
+
+
+            <solid
+                android:color="#61988E" />
+
+
+        <stroke android:width="5dp"
+            android:color="#7CC1B5"
+            android:dashWidth="22dp"
+            android:dashGap="1dp" />
+
+            <padding android:top="12dp"  />
+        </shape>
+
+
+    </item>
+</selector>
+
+
+<!--
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:shape="rectangle">
+
+            <corners android:bottomLeftRadius="40dp" />
+            <solid android:color="#ffffff" />
+            <gradient
+                android:startColor="#E3F1FA"
+                android:centerColor="#ffffff"
+                android:endColor="#ffffff"
+                android:angle="90" />
+
+        </shape>
+    </item>
+</selector>
+
+
+
+-->

@@ -1,9 +1,16 @@
 package augury.it.augury.Model;
 
+import android.os.Bundle;
+
 /**
  * Created by Bobaldo on 08/05/2015.
  */
 public class Friend {
+
+    public static final String NOME_AMICO = "nomeAmico";
+    public static final String COGNOME_AMICO = "cognomeAmico";
+    public static final String IMAGE_AMICO = "imageAmico";
+
     public Friend() {
     }
 
@@ -15,6 +22,15 @@ public class Friend {
     }
 
     private int id;
+
+    //COSTRUTTORE PER IL BUNDLE
+    public Friend(Bundle b) {
+        if (b != null) {
+            this.firstname = b.getString(NOME_AMICO);
+            this.lastname = b.getString(COGNOME_AMICO);
+            this.imageUrl = b.getString(IMAGE_AMICO);
+        }
+    }
 
     public int getId() {
         return id;
@@ -65,4 +81,14 @@ public class Friend {
     public void setLastname(String lastname) {
         this.lastname = lastname;
     }
+
+
+    public Bundle toBundle() {
+        Bundle b = new Bundle();
+        b.putString(NOME_AMICO, this.getFirstname());
+        b.putString(COGNOME_AMICO, this.getLastname());
+        return b;
+
+    }
+
 }

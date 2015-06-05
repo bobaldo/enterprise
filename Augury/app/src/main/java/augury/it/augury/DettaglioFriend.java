@@ -1,21 +1,207 @@
 package augury.it.augury;
 
-import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
-import augury.it.augury.Utility.Constants;
+import augury.it.augury.Model.Friend;
 
 
 public class DettaglioFriend extends ActionBarActivity {
+
+    String nomeAmico;
+    String cognomeAmico;
+    String ris;
+
+    Friend amico;
+
+    TextView nomeRisultato;
+    TextView cognomeRisultato;
+    Intent i;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dettaglio_friend);
 
-        Bundle b = getIntent().getBundleExtra(Constants.FRIEND_BUNDLE);
+        //Bundle b = getIntent().getBundleExtra("BUNDLE_AMICO");
+        //amico = new Friend(b);
+
+        nomeRisultato = (TextView) findViewById(R.id.nomeRisultato);
+        cognomeRisultato = (TextView) findViewById(R.id.cognomeRisultato);
+        i = getIntent();
+        Log.d("nome_amico", i.getStringExtra("nome_amico").toString() );
+        nomeAmico = i.getStringExtra("nome_amico").toString();
+        cognomeAmico= i.getStringExtra("cognome_amico").toString();
+
+
+       badName();
+
+    }
+
+
+    public void badName() {
+
+        //nomeAmico = amico.getFirstname();
+        //cognomeAmico = amico.getLastname();
+
+        //Log.d("cognomeAmico", cognomeAmico.toString());
+
+        String firstNameChar = new String();
+        String secondNameChar = new String();
+        firstNameChar = nomeAmico.substring(0,1);
+        secondNameChar = cognomeAmico.substring(0,1);
+
+        Log.d("LETTERA_NOME: ", firstNameChar);
+        Log.d("LETTERA_COGNOME: ", secondNameChar);
+
+        switch(firstNameChar.toLowerCase()) {
+            case "a":
+                nomeAmico = "La Cattiva";
+                break;
+            case "b":
+                nomeAmico = "Il Matto";
+                break;
+            case "c":
+                nomeAmico = "Il Grande";
+                break;
+            case "d":
+                nomeAmico = "Il Pericoloso";
+                break;
+            case "e":
+                nomeAmico = "Capitan";
+                break;
+            case "f":
+                nomeAmico = "L'Ombroso";
+                break;
+            case "g":
+                nomeAmico = "Professor";
+                break;
+            case "h":
+                nomeAmico = "Dottor";
+                break;
+            case "i":
+                nomeAmico = "Fantasma";
+                break;
+            case "l":
+                nomeAmico = "Il Brutale";
+                break;
+            case "m":
+                nomeAmico = "L'inafferrabile";
+                break;
+            case "n":
+                nomeAmico = "Il Vil";
+                break;
+            case "o":
+                nomeAmico = "L'Oscuro";
+                break;
+            case "p":
+                nomeAmico = "Il Pazzo";
+                break;
+            case "q":
+                nomeAmico = "l'Iron";
+                break;
+            case "r":
+                nomeAmico = "Il Velenoso";
+                break;
+            case "s":
+                nomeAmico = "Il Brutale";
+                break;
+            case "t":
+                nomeAmico = "Il Sanguinario";
+                break;
+            case "u":
+                nomeAmico = "The Dark";
+                break;
+            case "v":
+                nomeAmico = "Il Brutto";
+                break;
+            case "z":
+                nomeAmico = "Il Rancido";
+                break;
+
+            default: break;
+
+        }
+
+
+        switch(secondNameChar.toLowerCase()) {
+            case "a":
+                cognomeAmico = "Ombra";
+                break;
+            case "b":
+                cognomeAmico = "Cavaliere";
+                break;
+            case "c":
+                cognomeAmico = "Tarantola";
+                break;
+            case "d":
+                cognomeAmico = "Teschio";
+                break;
+            case "e":
+                cognomeAmico = "MasterMind";
+                break;
+            case "f":
+                cognomeAmico = "Wizard";
+                break;
+            case "g":
+                cognomeAmico = "Ninja";
+                break;
+            case "h":
+                cognomeAmico = "Diavolo";
+                break;
+            case "i":
+                cognomeAmico = "Freak";
+                break;
+            case "l":
+                cognomeAmico = "Bestia";
+                break;
+            case "m":
+                cognomeAmico = "Criminale";
+                break;
+            case "n":
+                cognomeAmico = "Master";
+                break;
+            case "o":
+                cognomeAmico = "Signore";
+                break;
+            case "p":
+                cognomeAmico = "Bambino";
+                break;
+            case "q":
+                cognomeAmico = "Cadavere";
+                break;
+            case "r":
+                cognomeAmico = "Cacciatore";
+                break;
+            case "s":
+                cognomeAmico = "Ragno";
+                break;
+            case "t":
+                cognomeAmico = "Creatura";
+                break;
+            case "u":
+                cognomeAmico = "Lupo Mannaro";
+                break;
+            case "v":
+                cognomeAmico = "Vampiro";
+                break;
+            case "z":
+                cognomeAmico = "Mutante";
+                break;
+
+            default: break;
+
+        }
+
+        ris = nomeAmico.toString() + " " + cognomeAmico.toString();
+        nomeRisultato.setText(nomeAmico.toString());
+        cognomeRisultato.setText(cognomeAmico.toString());
+
     }
 
 

@@ -25,8 +25,8 @@ public class ManageFacebook {
     public static void saveFriends(final ParseUser user) {
         if (!ManageParse.getIsLoad(user)) {
             Bundle parameters = new Bundle();
-            parameters.putString("fields", "id,first_name,last_name,picture");
-            parameters.putString("limit", "5000");
+            parameters.putString("fields", "id,first_name,last_name, picture");
+            parameters.putString("limit", "5");
 
             GraphRequest req = new GraphRequest(
                     AccessToken.getCurrentAccessToken(),

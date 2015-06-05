@@ -4,5 +4,45 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
     </style>
+    
+    <style name="labelAmico">
+        <item name="android:fontFamily">Helvetica</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:paddingLeft">4px</item>
+        <item name="android:paddingBottom">4px</item>
+        <item name="android:textColor">#F0B67F</item>
+        <item name="android:layout_marginRight">10sp</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+        <item name="android:gradientRadius">50%</item>
+    </style>
+
+    <style name="labelNome">
+        <item name="android:fontFamily">Helvetica</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:paddingLeft">20px</item>
+        <item name="android:paddingBottom">25px</item>
+        <item name="android:textColor">#F09E00</item>
+        <item name="android:layout_marginRight">10sp</item>
+        <item name="android:shadowColor">#FF444C</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">3</item>
+        <item name="android:shadowRadius">3</item>
+    </style>
+
+    <style name="labelCognome">
+        <item name="android:fontFamily">Helvetica</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:paddingLeft">4px</item>
+        <item name="android:paddingBottom">4px</item>
+        <item name="android:textColor">#D6CE83</item>
+        <item name="android:layout_marginRight">10sp</item>
+        <item name="android:shadowColor">#FF374C</item>
+        <item name="android:shadowDx">12</item>
+        <item name="android:shadowDy">12</item>
+        <item name="android:shadowRadius">18</item>
+    </style>
 
 </resources>

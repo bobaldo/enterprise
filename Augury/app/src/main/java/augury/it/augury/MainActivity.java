@@ -20,11 +20,16 @@ import com.parse.ParseUser;
 import java.util.ArrayList;
 
 import augury.it.augury.Facebook.ManageFacebook;
+import augury.it.augury.Model.Friend;
 import augury.it.augury.Storage.ManageParse;
 
 public class MainActivity extends ListActivity implements AdapterView.OnItemClickListener {
     private ListView listFriends;
     private Context context;
+    Friend amico;
+
+   // private final static String NOME_AMICO = "nomeAmico";
+   // private final static String COGNOME_AMICO = "cognomeAmico";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +46,7 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
                     ManageParse.getFriends(user, listFriends, context);
                 } else {
                     loginAndLoadFriends();
+
                 }
             } else {
                 loginAndLoadFriends();
@@ -64,21 +70,33 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
                     ManageFacebook.saveFriends(user);
                     ManageParse.getFriends(user, listFriends, context);
                     Log.d("MyApp", "LogIn. User logged in through Facebook!");
+                    Log.d("SERVIZIO", "sei entrato nel ManageParse.getFriends()");
                 } else {
+                    ManageParse.saveUserInfo(user);
                     ManageFacebook.saveFriends(user);
                     ManageParse.getFriends(user, listFriends, context);
                     Log.d("MyApp", "LogIn. User logged in through Facebook!");
+                    Log.d("SERVIZIO", "sei entrato nel ManageParse.getFriends()-2");
                 }
             }
         });
     }
 
+
+
+
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        Log.v("ecco la posizione ", Integer.toString(position));
-        Intent intent = new Intent(this, DettaglioFriend.class);
-        // intent.putExtra(FRIEND_BUNDLE, b);
-        startActivity(intent);
+
+        amico = (Friend) listFriends.getItemAtPosition(position);
+        Log.d("listAmico", amico.getFirstname() );
+        Log.d("listAmico", amico.getLastname() );
+
+        Bundle b = amico.toBundle();
+        Intent i = new Intent(this, DettaglioFriend.class);
+        i.putExtra("nome_amico", amico.getFirstname().toString());
+        i.putExtra("cognome_amico", amico.getLastname().toString());
+        startActivity(i);
     }
 
     @Override

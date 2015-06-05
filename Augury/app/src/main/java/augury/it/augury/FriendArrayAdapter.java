@@ -2,16 +2,13 @@ package augury.it.augury;
 
 import android.app.Activity;
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.net.URL;
 import java.util.List;
 
 import augury.it.augury.Model.Friend;
@@ -40,17 +37,22 @@ public class FriendArrayAdapter extends ArrayAdapter<Friend> {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
         View view = inflater.inflate(R.layout.lista_friend, null);
 
-        WebView image = (WebView)view.findViewById(R.id.icona);
+        ImageView image = (ImageView) view.findViewById(R.id.icona);
         //Log.d("App PD", amico.getImageUrl());
         //image.loadUrl(amico.getImageUrl());
-        image.loadUrl("http://www.mercuriomessenger.com/images/emoticons/icona036.png");
+        //image.loadUrl("http://www.mercuriomessenger.com/images/emoticons/icona036.png");
 
         //ImageView image = (ImageView) view.findViewById(R.id.icona);
-        //image.setImageResource(R.drawable.paperone);
+        image.setImageResource(R.drawable.paperone);
         //image.setImageResource(new URL(amico.));
 
         TextView tv = (TextView) view.findViewById(R.id.nomeFriend);
         tv.setText(amico.getFirstname());
+
+        TextView tvCognome = (TextView) view.findViewById(R.id.cognomeFriend);
+        tvCognome.setText(amico.getLastname());
+
+
 
 
         return view;
