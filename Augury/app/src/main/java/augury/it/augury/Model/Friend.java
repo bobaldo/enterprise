@@ -70,6 +70,16 @@ public class Friend {
         return imageUrl;
     }
 
+    private String imageLocal;
+
+    public void setImageLocal(String imageLocal) {
+        this.imageLocal = imageLocal;
+    }
+
+    public String getImageLocal() {
+        return imageLocal;
+    }
+
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
     }

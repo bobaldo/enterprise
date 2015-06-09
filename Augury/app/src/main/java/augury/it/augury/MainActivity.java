@@ -17,6 +17,7 @@ import com.parse.ParseException;
 import com.parse.ParseFacebookUtils;
 import com.parse.ParseUser;
 
+import java.io.File;
 import java.util.ArrayList;
 
 import augury.it.augury.Facebook.ManageFacebook;
@@ -38,6 +39,13 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
         this.context = this;
         listFriends = (ListView) findViewById(android.R.id.list);
         listFriends.setOnItemClickListener(this);
+
+        System.out.println("OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO");
+        File dirFiles = context.getFilesDir();
+        for (String strFile : dirFiles.list())
+        {
+            System.out.println("---"+strFile);
+        }
 
         try {
             ParseUser user = ParseUser.getCurrentUser();
@@ -67,13 +75,13 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
                     Toast.makeText(getApplicationContext(), "Errore nella creazione dell'utente - contattare il centro servizio", Toast.LENGTH_SHORT).show();
                 } else if (user.isNew()) {
                     ManageParse.saveUserInfo(user);
-                    ManageFacebook.saveFriends(user);
+                    ManageFacebook.saveFriends(user, context);
                     ManageParse.getFriends(user, listFriends, context);
                     Log.d("MyApp", "LogIn. User logged in through Facebook!");
                     Log.d("SERVIZIO", "sei entrato nel ManageParse.getFriends()");
                 } else {
                     ManageParse.saveUserInfo(user);
-                    ManageFacebook.saveFriends(user);
+                    ManageFacebook.saveFriends(user, context);
                     ManageParse.getFriends(user, listFriends, context);
                     Log.d("MyApp", "LogIn. User logged in through Facebook!");
                     Log.d("SERVIZIO", "sei entrato nel ManageParse.getFriends()-2");

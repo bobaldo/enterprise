@@ -2,6 +2,8 @@ package augury.it.augury;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +11,10 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.List;
 
 import augury.it.augury.Model.Friend;
@@ -43,7 +49,26 @@ public class FriendArrayAdapter extends ArrayAdapter<Friend> {
         //image.loadUrl("http://www.mercuriomessenger.com/images/emoticons/icona036.png");
 
         //ImageView image = (ImageView) view.findViewById(R.id.icona);
-        image.setImageResource(R.drawable.paperone);
+        //image.setImageResource(R.drawable.paperone);
+
+        FileInputStream imgFile = null;
+        try {
+            if(amico.getImageLocal() != null) {
+                imgFile = context.openFileInput(amico.getImageLocal());
+                if (imgFile != null) {
+                    Bitmap myBitmap = BitmapFactory.decodeStream(imgFile);
+                    image.setImageBitmap(myBitmap);
+                } else {
+                    image.setImageResource(R.drawable.paperone);
+                }
+            }
+            else{
+                image.setImageResource(R.drawable.paperone);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
         //image.setImageResource(new URL(amico.));
 
         TextView tv = (TextView) view.findViewById(R.id.nomeFriend);

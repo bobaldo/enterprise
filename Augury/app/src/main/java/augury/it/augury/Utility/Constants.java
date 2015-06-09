@@ -13,4 +13,6 @@ public class Constants {
     public static final String IDFACEBOOK = "idFacebook";
     public static final String IMAGEURL = "imageUrl";
     public static final String FRIEND_BUNDLE = "FRIEND_BUNDLE";
+    public static final String IMAGELOCAL = "imageLocal";
+
 }
