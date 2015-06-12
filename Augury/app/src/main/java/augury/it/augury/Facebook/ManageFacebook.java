@@ -47,7 +47,7 @@ public class ManageFacebook {
                                 JSONArray jsonArray = jsonObj.getJSONArray("data");
                                 ArrayList<ParseObject> friendList= new ArrayList<ParseObject>();
 
-                                for (int i = 0; i < 4; i++) {
+                                for (int i = 0; i < 10; i++) {
                                     try {
                                         JSONObject obj = jsonArray.getJSONObject(i);
 
@@ -61,7 +61,7 @@ public class ManageFacebook {
                                     }
                                 }
 
-                                new DownloadImageTask(context).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, friendList);
+                                // DownloadImageTask(context).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, friendList);
 
                             } catch (Exception e) {
                                 e.printStackTrace();

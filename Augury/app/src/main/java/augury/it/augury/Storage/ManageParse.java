@@ -95,6 +95,7 @@ public class ManageParse {
                             f.setIsDelete(fri.getBoolean(Constants.ISDELETE));
                             f.setImageUrl(fri.getString(Constants.IMAGEURL));
                             f.setImageLocal(fri.getString(Constants.IMAGELOCAL));
+                            f.setParseId(fri.getObjectId());
                             ret.add(f);
                         }
                         return ret;

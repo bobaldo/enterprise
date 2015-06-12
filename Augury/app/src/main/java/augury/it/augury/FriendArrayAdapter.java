@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.AsyncTask;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,7 @@ import java.io.FileNotFoundException;
 import java.util.List;
 
 import augury.it.augury.Model.Friend;
+import augury.it.augury.Utility.DownloadImageTask;
 
 /**
  * Created by innocenzo on 11/05/15.
@@ -45,11 +47,6 @@ public class FriendArrayAdapter extends ArrayAdapter<Friend> {
 
         ImageView image = (ImageView) view.findViewById(R.id.icona);
         //Log.d("App PD", amico.getImageUrl());
-        //image.loadUrl(amico.getImageUrl());
-        //image.loadUrl("http://www.mercuriomessenger.com/images/emoticons/icona036.png");
-
-        //ImageView image = (ImageView) view.findViewById(R.id.icona);
-        //image.setImageResource(R.drawable.paperone);
 
         FileInputStream imgFile = null;
         try {
@@ -59,10 +56,12 @@ public class FriendArrayAdapter extends ArrayAdapter<Friend> {
                     Bitmap myBitmap = BitmapFactory.decodeStream(imgFile);
                     image.setImageBitmap(myBitmap);
                 } else {
+                    new DownloadImageTask(context, image).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, amico);
                     image.setImageResource(R.drawable.paperone);
                 }
             }
             else{
+                new DownloadImageTask(context, image).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, amico);
                 image.setImageResource(R.drawable.paperone);
             }
         } catch (FileNotFoundException e) {
@@ -77,11 +76,7 @@ public class FriendArrayAdapter extends ArrayAdapter<Friend> {
         TextView tvCognome = (TextView) view.findViewById(R.id.cognomeFriend);
         tvCognome.setText(amico.getLastname());
 
-
-
-
         return view;
-
 
     }
 }

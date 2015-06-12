@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
+import android.widget.ImageView;
 
 import com.parse.GetCallback;
 import com.parse.ParseException;
@@ -14,6 +15,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.InputStream;
+import java.lang.ref.WeakReference;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
@@ -23,50 +25,54 @@ import augury.it.augury.Model.Friend;
 /**
  * Created by michael on 07/06/15.
  */
-public class DownloadImageTask extends AsyncTask<ArrayList<ParseObject>, Void, String> {
+public class DownloadImageTask extends AsyncTask<Friend, Void, Bitmap> {
 
-    private Context context;
+    private final Context context;
+    private final WeakReference<ImageView> imageViewReference;
 
-    public DownloadImageTask(Context context)
+    public DownloadImageTask(Context context, ImageView imageView)
     {
+
         this.context = context;
+        imageViewReference = new WeakReference<ImageView>(imageView);
     }
 
 
     @Override
-    protected String doInBackground(ArrayList<ParseObject>... obj) {
+    protected Bitmap doInBackground(Friend... obj) {
 
         return download_Image(obj[0]);
     }
 
     @Override
-    protected void onPostExecute(String result) {
+    protected void onPostExecute(Bitmap bitmap) {
 
-        System.out.println("Saved: "+result);
+        if (imageViewReference != null) {
+            ImageView imageView = imageViewReference.get();
+            if (imageView != null) {
+                imageView.setImageBitmap(bitmap);
+            }
+        }
 
     }
 
 
-    private String download_Image(ArrayList<ParseObject> list) {
-        Bitmap bmp;
+    private Bitmap download_Image(Friend obj) {
 
-        FileOutputStream outputStream = null;
-        ParseObject obj;
-        String filename = "";
-        try {
-            try{
-                for(int i=0; i<4; i++) {
+        FileOutputStream outputStream;
+       // ParseObject obj;
+        String filename;
+        Bitmap myBitmap = null;
 
-                    obj = list.get(i);
+        for(int i=0; i<1; i++) {
+                    try {
+
+                    //obj = list.get(i);
                     System.out.println("Inside saving photo");
-                    filename = obj.getObjectId().toString() + ".jpg";
-                    URL url = new URL(obj.get(Constants.IMAGEURL).toString());
-                    HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-                    connection.setDoInput(true);
-                    connection.connect();
-                    InputStream input = connection.getInputStream();
-                    Bitmap myBitmap = BitmapFactory.decodeStream(input);
+                    filename = obj.getParseId() + ".jpg";
 
+                    InputStream is = new URL(obj.getImageUrl()).openStream();
+                    myBitmap = BitmapFactory.decodeStream(is);
                     outputStream = context.openFileOutput(filename, Context.MODE_PRIVATE);
 
                     // Writing the bitmap to the output stream
@@ -74,35 +80,25 @@ public class DownloadImageTask extends AsyncTask<ArrayList<ParseObject>, Void, S
                     outputStream.close();
 
                     ParseQuery<ParseObject> query = ParseQuery.getQuery(Constants.FRIEND);
-                    ParseObject friend = query.get(obj.getObjectId().toString());
+                    ParseObject friend = query.get(obj.getParseId());
                     if (friend != null) {
-                        friend.put("imageLocal", friend.getObjectId().toString() + ".jpg");
+                        friend.put("imageLocal", friend.getObjectId() + ".jpg");
                         friend.save();
+                        obj.setImageLocal(friend.getObjectId() + ".jpg");
                     } else {
                         System.out.println("Error wtiting image path on parse!!!!!!!!!!");
 
                     }
-                    /*query.getInBackground(obj.getObjectId().toString(), new GetCallback<ParseObject>() {
-                        @Override
-                        public void done(ParseObject friend, ParseException e) {
-                            if (e == null) {
-                                friend.put("imageLocal", friend.getObjectId().toString() + ".jpg");
-                                friend.saveInBackground();
-                            } else {
-                                System.out.println("Error wtiting image path on parse!!!!!!!!!!");
-                                System.out.println(e);
-                            }
+
+                        } catch (FileNotFoundException e1) {
+                            filename = "";
+
+                        } catch (Exception e) {
+                            System.out.println("------------------"+e);
+
                         }
-                    });*/
                 }
 
-            } catch (FileNotFoundException e1) {
-                filename = "";
-            }
-        } catch (Exception e) {
-            filename = "";
-        }
-
-        return filename;
+        return myBitmap;
     }
 }
