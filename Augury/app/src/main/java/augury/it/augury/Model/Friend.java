@@ -21,7 +21,7 @@ public class Friend {
         this.lastname = lastName;
     }
 
-    private int id;
+    private String parseId;
 
     //COSTRUTTORE PER IL BUNDLE
     public Friend(Bundle b) {
@@ -32,8 +32,12 @@ public class Friend {
         }
     }
 
-    public int getId() {
-        return id;
+    public String getParseId() {
+        return parseId;
+    }
+
+    public void setParseId(String id) {
+        parseId = id;
     }
 
     private String lastname;
@@ -68,6 +72,16 @@ public class Friend {
 
     public String getImageUrl() {
         return imageUrl;
+    }
+
+    private String imageLocal;
+
+    public void setImageLocal(String imageLocal) {
+        this.imageLocal = imageLocal;
+    }
+
+    public String getImageLocal() {
+        return imageLocal;
     }
 
     public void setImageUrl(String imageUrl) {

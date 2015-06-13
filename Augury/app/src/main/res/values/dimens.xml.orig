@@ -1,0 +1,10 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+<<<<<<< HEAD
+    <item format="float" name="abc_disabled_alpha_material_light" type="dimen">0.26</item>
+=======
+    <dimen name="abc_disabled_alpha_material_light">26dp</dimen>
+>>>>>>> newMichael
+</resources>
