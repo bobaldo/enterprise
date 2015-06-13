@@ -1,26 +1,32 @@
 package augury.it.augury;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-import augury.it.augury.Model.Friend;
+import java.io.FileInputStream;
 
+import augury.it.augury.Model.Friend;
 
 public class DettaglioFriend extends ActionBarActivity {
 
     String nomeAmico;
     String cognomeAmico;
+    String imageAmico;
     String ris;
 
     Friend amico;
 
     TextView nomeRisultato;
     TextView cognomeRisultato;
+    ImageView immagineRisultato;
     Intent i;
 
     @Override
@@ -28,21 +34,31 @@ public class DettaglioFriend extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dettaglio_friend);
 
-        //Bundle b = getIntent().getBundleExtra("BUNDLE_AMICO");
-        //amico = new Friend(b);
-
         nomeRisultato = (TextView) findViewById(R.id.nomeRisultato);
         cognomeRisultato = (TextView) findViewById(R.id.cognomeRisultato);
+        immagineRisultato = (ImageView) findViewById(R.id.immagineFriend);
         i = getIntent();
-        Log.d("nome_amico", i.getStringExtra("nome_amico").toString() );
-        nomeAmico = i.getStringExtra("nome_amico").toString();
-        cognomeAmico= i.getStringExtra("cognome_amico").toString();
+        Log.d("nome_amico", i.getStringExtra("nome_amico"));
+        nomeAmico = i.getStringExtra("nome_amico");
+        cognomeAmico = i.getStringExtra("cognome_amico");
+        imageAmico = i.getStringExtra("image_amico");
 
-
-       badName();
-
+        FileInputStream imgFile = null;
+        try {
+            if (imageAmico != null) {
+                imgFile = this.openFileInput(imageAmico);
+                if (imgFile != null) {
+                    Bitmap myBitmap = BitmapFactory.decodeStream(imgFile);
+                    immagineRisultato.setImageBitmap(myBitmap);
+                }
+            } else {
+                immagineRisultato.setImageResource(R.drawable.paperone);
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        badName();
     }
-
 
     public void badName() {
 
@@ -53,13 +69,13 @@ public class DettaglioFriend extends ActionBarActivity {
 
         String firstNameChar = new String();
         String secondNameChar = new String();
-        firstNameChar = nomeAmico.substring(0,1);
-        secondNameChar = cognomeAmico.substring(0,1);
+        firstNameChar = nomeAmico.substring(0, 1);
+        secondNameChar = cognomeAmico.substring(0, 1);
 
         Log.d("LETTERA_NOME: ", firstNameChar);
         Log.d("LETTERA_COGNOME: ", secondNameChar);
 
-        switch(firstNameChar.toLowerCase()) {
+        switch (firstNameChar.toLowerCase()) {
             case "a":
                 nomeAmico = "La Cattiva";
                 break;
@@ -123,13 +139,9 @@ public class DettaglioFriend extends ActionBarActivity {
             case "z":
                 nomeAmico = "Il Rancido";
                 break;
-
-            default: break;
-
         }
 
-
-        switch(secondNameChar.toLowerCase()) {
+        switch (secondNameChar.toLowerCase()) {
             case "a":
                 cognomeAmico = "Ombra";
                 break;
@@ -193,15 +205,11 @@ public class DettaglioFriend extends ActionBarActivity {
             case "z":
                 cognomeAmico = "Mutante";
                 break;
-
-            default: break;
-
         }
 
-        ris = nomeAmico.toString() + " " + cognomeAmico.toString();
-        nomeRisultato.setText(nomeAmico.toString());
-        cognomeRisultato.setText(cognomeAmico.toString());
-
+        ris = nomeAmico + " " + cognomeAmico;
+        nomeRisultato.setText(nomeAmico);
+        cognomeRisultato.setText(cognomeAmico);
     }
 
 

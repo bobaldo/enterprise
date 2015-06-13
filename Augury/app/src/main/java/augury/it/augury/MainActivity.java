@@ -29,9 +29,6 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
     private Context context;
     Friend amico;
 
-   // private final static String NOME_AMICO = "nomeAmico";
-   // private final static String COGNOME_AMICO = "cognomeAmico";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +37,7 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
         listFriends = (ListView) findViewById(android.R.id.list);
         listFriends.setOnItemClickListener(this);
 
-        System.out.println("OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO");
+        //TODO: capire a cosa serve, nel caso camcellarlo
         File dirFiles = context.getFilesDir();
         for (String strFile : dirFiles.list())
         {
@@ -54,7 +51,6 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
                     ManageParse.getFriends(user, listFriends, context);
                 } else {
                     loginAndLoadFriends();
-
                 }
             } else {
                 loginAndLoadFriends();
@@ -77,12 +73,14 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
                     ManageParse.saveUserInfo(user);
                     ManageFacebook.saveFriends(user, context);
                     ManageParse.getFriends(user, listFriends, context);
+                    ManageParse.setIsLoad(user, true);
                     Log.d("MyApp", "LogIn. User logged in through Facebook!");
                     Log.d("SERVIZIO", "sei entrato nel ManageParse.getFriends()");
                 } else {
                     ManageParse.saveUserInfo(user);
                     ManageFacebook.saveFriends(user, context);
                     ManageParse.getFriends(user, listFriends, context);
+                    ManageParse.setIsLoad(user, true);
                     Log.d("MyApp", "LogIn. User logged in through Facebook!");
                     Log.d("SERVIZIO", "sei entrato nel ManageParse.getFriends()-2");
                 }
@@ -90,20 +88,17 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
         });
     }
 
-
-
-
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
         amico = (Friend) listFriends.getItemAtPosition(position);
-        Log.d("listAmico", amico.getFirstname() );
-        Log.d("listAmico", amico.getLastname() );
+        Log.d("listAmico", amico.getFirstname());
+        Log.d("listAmico", amico.getLastname());
 
         Bundle b = amico.toBundle();
         Intent i = new Intent(this, DettaglioFriend.class);
-        i.putExtra("nome_amico", amico.getFirstname().toString());
-        i.putExtra("cognome_amico", amico.getLastname().toString());
+        i.putExtra("nome_amico", amico.getFirstname());
+        i.putExtra("cognome_amico", amico.getLastname());
+        i.putExtra("image_amico", amico.getImageLocal());
         startActivity(i);
     }
 

@@ -25,21 +25,11 @@ import augury.it.augury.Model.Friend;
 import augury.it.augury.R;
 import augury.it.augury.Utility.Constants;
 
-
-
 /**
  * Created by Bobaldo on 30/04/2015.
  */
 public class ManageParse {
-
-    private final static String BUNDLE_AMICO = "bundleAmico";
-
-
-    public void autenticate(String username, String password) {
-    }
-
     public static ParseObject insert(JSONObject obj, ParseUser user) throws JSONException {
-
         ParseObject fri = new ParseObject(Constants.FRIEND);
         fri.put(Constants.FIRSTNAME, obj.get("first_name"));
         fri.put(Constants.LASTNAME, obj.get("last_name"));
@@ -108,16 +98,13 @@ public class ManageParse {
                             listView.setAdapter(adapter);
 
                         } catch (NullPointerException e) {
+                            e.printStackTrace();
                         }
                     }
                 }.execute();
-
             }
         });
     }
-
-
-
 
     public static void saveUserInfo(final ParseUser userParse) {
         GraphRequestAsyncTask request = GraphRequest.newMeRequest(AccessToken.getCurrentAccessToken(), new GraphRequest.GraphJSONObjectCallback() {
@@ -137,6 +124,7 @@ public class ManageParse {
         try {
             ret = user.getBoolean("isLoad");
         } catch (Exception ex) {
+            ex.printStackTrace();
         }
         return ret;
     }
